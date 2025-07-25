@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p className="flex items-center justify-center gap-1">
+          <div className="flex items-center justify-center gap-1">
             &copy; {new Date().getFullYear()} &bull; Build with
             <Icon className="text-gray-400" size="sm">
               <svg
@@ -107,7 +107,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/saiefalemon/" className="hover:underline">
               Saief Al Emon
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

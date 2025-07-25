@@ -1,11 +1,15 @@
+// Button.tsx
+// A button component supporting variant, size, and loading states.
+
 import { cn } from "@/lib/utils";
 import type React from "react";
 
+// Props for customizing button appearance and behavior
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
-  loading?: boolean;
+  children: React.ReactNode; // Button label or icon
+  variant?: "primary" | "secondary" | "outline" | "ghost"; // Visual style
+  size?: "sm" | "md" | "lg"; // Padding and text size presets
+  loading?: boolean; // Show spinner if true
 }
 
 export function Button({
@@ -17,6 +21,7 @@ export function Button({
   disabled,
   ...props
 }: ButtonProps) {
+  // Variant styles using Tailwind class conventions
   const variants = {
     primary: "btn-primary",
     secondary: "btn-secondary",
@@ -24,6 +29,7 @@ export function Button({
     ghost: "hover:bg-secondary text-foreground",
   };
 
+  // Size styles mapped to Tailwind padding and font sizes
   const sizes = {
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-base",
@@ -33,15 +39,17 @@ export function Button({
   return (
     <button
       className={cn(
+        // Base styles for accessibility, interactivity, and layout
         "inline-flex items-center justify-center rounded-xl font-semibold transition-all duration-300 focus-ring disabled:opacity-50 disabled:cursor-not-allowed",
         variants[variant],
         sizes[size],
         className
       )}
-      disabled={disabled || loading}
+      disabled={disabled || loading} // Disable when explicitly set or loading is active
       {...props}
     >
       {loading && (
+        // SVG spinner indicating loading state
         <svg
           className="animate-spin -ml-1 mr-3 h-5 w-5"
           xmlns="http://www.w3.org/2000/svg"
