@@ -12,7 +12,7 @@ interface CourseOverviewProps {
  * Combined course overview section with title, description, and instructor info
  */
 export default function CourseOverview({ courseData }: CourseOverviewProps) {
-  console.log("CourseOverview - Course Data:", courseData);
+  //   console.log("===CourseOverview===:", courseData);
 
   // Find instructor section
   const instructorSection = courseData.sections?.find((section) => section.type === "instructors");

@@ -1,5 +1,6 @@
 import { Data } from "@/lib/types";
 import CourseOverview from "./sections/CourseOverview";
+import SidebarEnrollmentCard from "./sections/SidebarEnrollmentCard";
 
 interface CoursePageLayoutProps {
   courseData: Data;
@@ -9,7 +10,7 @@ interface CoursePageLayoutProps {
  * Main course page layout with modern design and sticky sidebar
  */
 export default function CoursePageLayout({ courseData }: CoursePageLayoutProps) {
-  console.log("CoursePageLayout - Full course data:", JSON.stringify(courseData, null, 2));
+  //   console.log("CoursePageLayout - Full course data:", JSON.stringify(courseData, null, 2));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
@@ -19,15 +20,27 @@ export default function CoursePageLayout({ courseData }: CoursePageLayoutProps) 
           <div className="lg:col-span-2 space-y-8">
             {/* Course Overview (Title + Description) */}
             <CourseOverview courseData={courseData} />
+
+            {/* How the course is laid out */}
+            {/* <CourseLayout sections={courseData.sections || []} /> */}
+
+            {/* What you will learn */}
+            {/* <WhatYouLearn sections={courseData.sections || []} /> */}
+
+            {/* Course Exclusive Features */}
+            {/* <CourseExclusiveFeature sections={courseData.sections || []} /> */}
+
+            {/* Course Details */}
+            {/* <CourseDetails sections={courseData.sections || []} /> */}
           </div>
 
           {/* Right Column - Sticky Sidebar (1/3 width) */}
           <div className="lg:col-span-1">
-            {/* <StickyEnrollmentCard
+            <SidebarEnrollmentCard
               media={courseData.media || []}
               checklist={courseData.checklist || []}
               ctaText={courseData.cta_text}
-            /> */}
+            />
           </div>
         </div>
       </main>

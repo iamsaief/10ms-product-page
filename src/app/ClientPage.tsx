@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getCourseData } from "@/lib/api";
@@ -8,20 +8,19 @@ import { Data } from "@/lib/types";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import CoursePageSkeleton from "@/components/CoursePageSkeleton";
 import CoursePageLayout from "@/components/CoursePageLayout";
-
-interface PageProps {
-  searchParams: { lang?: string };
-}
+import { useSearchParams } from "next/navigation";
 
 /**
  * Main client page component with proper loading states and skeleton
  */
-export default function ClientPage({ searchParams }: PageProps) {
+export default function ClientPage() {
   const [courseData, setCourseData] = useState<Data | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const lang = searchParams.lang || "en";
+  const searchParams = useSearchParams();
+
+  const lang = useMemo(() => searchParams.get("lang") || "en", [searchParams]);
 
   useEffect(() => {
     async function fetchData() {
@@ -29,11 +28,11 @@ export default function ClientPage({ searchParams }: PageProps) {
         setLoading(true);
         setError(null);
 
-        console.log("Starting data fetch..."); // Debug log
+        console.log("⏳ DATA FETCHING..."); // Debug log
 
         const response = await getCourseData(lang);
 
-        console.log("Data fetch completed:", response); // Debug log
+        console.log("✅ DATA FETCHED:", response); // Debug log
 
         if (response && response.data) {
           setCourseData(response.data);

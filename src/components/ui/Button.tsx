@@ -40,7 +40,7 @@ export function Button({
     <button
       className={cn(
         // Base styles for accessibility, interactivity, and layout
-        "inline-flex items-center justify-center rounded-xl font-semibold transition-all duration-300 focus-ring disabled:opacity-50 disabled:cursor-not-allowed",
+        "inline-flex items-center justify-center rounded-xl font-semibold transition-all duration-300 focus-ring cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed",
         variants[variant],
         sizes[size],
         className

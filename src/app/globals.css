@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(222.2 84% 4.9%);
@@ -244,13 +246,6 @@
 
 .prose img {
   @apply rounded-lg shadow-md;
-}
-
-/* Sticky sidebar */
-.sticky-sidebar {
-  position: sticky;
-  top: 2rem;
-  height: fit-content;
 }
 
 /* Custom spacing */
