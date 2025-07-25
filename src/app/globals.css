@@ -48,7 +48,7 @@
   --color-border: hsl(240 3.7% 15.9%);
   --color-input: hsl(240 3.7% 15.9%);
   --color-ring: hsl(142 76% 36%);
-  --color-shadow-color: hsl(220 3% 4%);
+  --color-shadow-color: hsl(220 8 10);
   --color-gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
   --color-gradient-secondary: linear-gradient(135deg, #374151 0%, #1f2937 100%);
 }
@@ -84,16 +84,16 @@
 /* Card styles */
 .card {
   @apply bg-card text-card-foreground rounded-xl border border-border/50 shadow-sm;
-  box-shadow: 0 1px 3px 0 rgba(var(--shadow-color) / 0.1), 0 1px 2px 0 rgba(var(--shadow-color) / 0.06);
+  box-shadow: 0 1px 3px 0 rgba(220 3% 15% / 0.1), 0 1px 2px 0 rgba(220 3% 15% / 0.06);
 }
 
 .card-hover {
   @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
-  box-shadow: 0 4px 6px -1px rgba(var(--shadow-color) / 0.1), 0 2px 4px -1px rgba(var(--shadow-color) / 0.06);
+  box-shadow: 0 4px 6px -1px rgba(220 3% 15% / 0.1), 0 2px 4px -1px rgba(220 3% 15% / 0.06);
 }
 
 .card-hover:hover {
-  box-shadow: 0 20px 25px -5px rgba(var(--shadow-color) / 0.1), 0 10px 10px -5px rgba(var(--shadow-color) / 0.04);
+  box-shadow: 0 20px 25px -5px rgba(220 3% 15% / 0.1), 0 10px 10px -5px rgba(220 3% 15% / 0.04);
 }
 
 /* Button styles */

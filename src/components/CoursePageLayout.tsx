@@ -1,6 +1,10 @@
 import { Data } from "@/lib/types";
 import CourseOverview from "./sections/CourseOverview";
 import SidebarEnrollmentCard from "./sections/SidebarEnrollmentCard";
+import CourseFeatures from "./sections/CourseFeatures";
+import WhatYouLearn from "./sections/WhatYouLearn";
+import CourseExclusiveFeature from "./sections/CourseExclusiveFeature";
+import CourseDetails from "./sections/CourseDetails";
 
 interface CoursePageLayoutProps {
   courseData: Data;
@@ -22,16 +26,16 @@ export default function CoursePageLayout({ courseData }: CoursePageLayoutProps) 
             <CourseOverview courseData={courseData} />
 
             {/* How the course is laid out */}
-            {/* <CourseLayout sections={courseData.sections || []} /> */}
+            <CourseFeatures sections={courseData.sections || []} />
 
             {/* What you will learn */}
-            {/* <WhatYouLearn sections={courseData.sections || []} /> */}
+            <WhatYouLearn sections={courseData.sections || []} />
 
             {/* Course Exclusive Features */}
-            {/* <CourseExclusiveFeature sections={courseData.sections || []} /> */}
+            <CourseExclusiveFeature sections={courseData.sections || []} />
 
             {/* Course Details */}
-            {/* <CourseDetails sections={courseData.sections || []} /> */}
+            <CourseDetails sections={courseData.sections || []} />
           </div>
 
           {/* Right Column - Sticky Sidebar (1/3 width) */}
