@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ClientPage from "./ClientPage";
 
 interface PageProps {
   searchParams: { lang?: string };
@@ -25,5 +26,5 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 
 // Server-side rendered page component
 export default async function HomePage({ searchParams }: PageProps) {
-  return <>Hello world</>;
+  return <ClientPage searchParams={searchParams} />;
 }
