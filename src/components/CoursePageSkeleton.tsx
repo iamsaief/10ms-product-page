@@ -40,11 +40,11 @@ export default function CoursePageSkeleton() {
               </div>
             </section>
 
-            {/* Course Layout Skeleton */}
+            {/* Course Features Skeleton */}
             <section className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
               <div className="h-6 w-48 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-6"></div>
-              <div className="space-y-4">
-                {[...Array(5)].map((_, i) => (
+              <div className="grid grid-cols-2 gap-4">
+                {[...Array(4)].map((_, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="w-8 h-8 bg-gray-200 dark:bg-gray-600 rounded-full animate-pulse"></div>
                     <div className="space-y-2 flex-1">
@@ -59,7 +59,7 @@ export default function CoursePageSkeleton() {
             {/* What You Learn Skeleton */}
             <section className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
               <div className="h-6 w-64 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-6"></div>
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
                 {[...Array(6)].map((_, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <div className="w-6 h-6 bg-gray-200 dark:bg-gray-600 rounded-full animate-pulse"></div>
@@ -78,7 +78,7 @@ export default function CoursePageSkeleton() {
               <div className="space-y-4">
                 {[...Array(4)].map((_, i) => (
                   <div key={i} className="flex items-start space-x-3 p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                    <div className="w-8 h-8 bg-gray-200 dark:bg-gray-600 rounded-full animate-pulse"></div>
+                    <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-xl animate-pulse"></div>
                     <div className="space-y-2 flex-1">
                       <div className="h-5 bg-gray-200 dark:bg-gray-600 rounded animate-pulse w-2/3"></div>
                       <div className="h-4 bg-gray-200 dark:bg-gray-600 rounded animate-pulse w-1/2"></div>
@@ -92,11 +92,11 @@ export default function CoursePageSkeleton() {
             <section className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
               <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-6"></div>
               <div className="space-y-3">
-                {[...Array(8)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"
-                    style={{ width: `${Math.random() * 40 + 60}%` }}
+                    className="w-full h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"
+                    // style={{ width: `${Math.round(Math.random() * 40 + 60)}%` }}
                   ></div>
                 ))}
               </div>
@@ -105,43 +105,28 @@ export default function CoursePageSkeleton() {
 
           {/* Right Column - Sidebar (1/3 width) */}
           <div className="lg:col-span-1 space-y-8">
-            {/* Trailer Skeleton */}
             <section className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+              {/* Trailer Skeleton */}
               <div className="h-6 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4"></div>
-              <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse"></div>
-            </section>
+              <div className="aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse mb-4"></div>
 
-            {/* CTA Skeleton */}
-            <section className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-              <div className="h-6 w-12 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4"></div>
-              <div className="space-y-4">
+              {/* CTA Skeleton */}
+              <div className="space-y-4 mb-6">
                 <div className="text-center space-y-2">
-                  <div className="h-8 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mx-auto"></div>
-                  <div className="h-4 w-16 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mx-auto"></div>
+                  <div className="h-8 w-30 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mx-auto"></div>
+                  <div className="h-6 w-20 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mx-auto"></div>
+                  <div className="h-4 w-35 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mx-auto"></div>
                 </div>
                 <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse"></div>
-                <div className="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  {[...Array(3)].map((_, i) => (
-                    <div key={i} className="flex items-center space-x-3">
-                      <div className="w-5 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
-                      <div className="h-4 flex-1 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
-                    </div>
-                  ))}
-                </div>
               </div>
-            </section>
 
-            {/* Checklist Skeleton */}
-            <section className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-              <div className="h-6 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4"></div>
-              <div className="space-y-3">
+              {/* Checklist Skeleton */}
+              <div className="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="h-6 w-24 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-4"></div>
                 {[...Array(5)].map((_, i) => (
-                  <div key={i} className="flex items-start space-x-3">
-                    <div className="w-5 h-5 bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse mt-1"></div>
-                    <div className="space-y-1 flex-1">
-                      <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
-                      <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-3/4"></div>
-                    </div>
+                  <div key={i} className="flex items-center space-x-3">
+                    <div className="w-5 h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
+                    <div className="h-4 flex-1 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
                   </div>
                 ))}
               </div>
