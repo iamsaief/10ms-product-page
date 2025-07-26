@@ -29,7 +29,7 @@ export default function CourseFeatures({ sections }: CourseFeaturesProps) {
       </CardHeader>
       <CardContent>
         <div className="grid gap-4 md:grid-cols-2">
-          {features.map((feature: any, index: number) => (
+          {features.map((feature, index: number) => (
             <div
               key={feature.id || index}
               className="group flex items-start space-x-4 p-4 rounded-xl bg-muted/30 hover:bg-muted/50 transition-all duration-300 hover:shadow-md"

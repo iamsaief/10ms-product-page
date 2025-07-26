@@ -1,6 +1,7 @@
 // Developer Note: These types are modeled based on the API response structure and the UI wireframe.
 // Handled data from API in a safe and predictable way.
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface Medium {
   name: string;
   resource_type: string;
@@ -17,6 +18,7 @@ export interface Checklist {
 }
 
 export interface Seo {
+  defaultMeta: any;
   title?: string;
   description?: string;
   keywords?: string;

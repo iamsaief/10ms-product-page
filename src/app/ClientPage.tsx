@@ -28,11 +28,11 @@ export default function ClientPage() {
         setLoading(true);
         setError(null);
 
-        console.log("⏳ DATA FETCHING..."); // Debug log
+        // console.log("⏳ DATA FETCHING..."); // Debug log
 
         const response = await getCourseData(lang);
 
-        console.log("✅ DATA FETCHED:", response); // Debug log
+        // console.log("✅ DATA FETCHED:", response); // Debug log
 
         if (response && response.data) {
           setCourseData(response.data);

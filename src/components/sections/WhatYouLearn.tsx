@@ -31,7 +31,7 @@ export default function WhatYouLearn({ sections }: WhatYouLearnProps) {
       </CardHeader>
       <CardContent>
         <div className="grid md:grid-cols-2 gap-4">
-          {points.map((point: any, index: number) => (
+          {points.map((point, index: number) => (
             <div
               key={point.id || index}
               className="group flex items-start space-x-3 p-4 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 border border-green-200/50 dark:border-green-800/30 hover:shadow-md transition-all duration-300"

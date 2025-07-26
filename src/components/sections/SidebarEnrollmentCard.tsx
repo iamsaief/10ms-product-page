@@ -1,11 +1,12 @@
 "use client";
 
 import { Checklist, CtaText, Medium } from "@/lib/types";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card";
+import { Card, CardContent, CardHeader } from "../ui/Card";
 import { Icon } from "../ui/Icon";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 import VideoPlayer from "../VideoPlayer";
+import Image from "next/image";
 
 interface SidebarEnrollmentCardProps {
   media: Medium[];
@@ -78,12 +79,18 @@ export default function SidebarEnrollmentCard({ media, checklist, ctaText }: Sid
           {/* Course Stats */}
           {checklist.length > 0 && (
             <div className="space-y-3 pt-4 border-t border-border/50">
-              <h3 className="font-semibold text-foreground text-sm mb-3">What's Included</h3>
+              <h3 className="font-semibold text-foreground text-sm mb-3">{"What's Included"}</h3>
               {checklist.map((item, index) => (
                 <div key={item.id || index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0 mt-0.5">
                     {item.icon && item.icon !== "" ? (
-                      <img src={item.icon || "/placeholder.svg"} alt="" className="w-4 h-4 object-contain opacity-70" />
+                      <Image
+                        width={20}
+                        height={20}
+                        src={item.icon || "/placeholder.svg"}
+                        alt=""
+                        className="w-4 h-4 object-contain opacity-70"
+                      />
                     ) : (
                       <Icon size="sm" variant="primary">
                         <svg fill="currentColor" viewBox="0 0 20 20">

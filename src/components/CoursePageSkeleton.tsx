@@ -1,5 +1,5 @@
 /**
- * Comprehensive skeleton loader matching the exact wireframe layout
+ * Skeleton loader matching the exact wireframe layout
  * Prevents UI jumping by maintaining proper spacing and structure
  */
 export default function CoursePageSkeleton() {

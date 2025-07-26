@@ -56,7 +56,7 @@ export default function CourseExclusiveFeature({ sections }: CourseExclusiveFeat
       </CardHeader>
       <CardContent>
         <div className="grid gap-6">
-          {features.map((feature: any, index: number) => (
+          {features.map((feature, index: number) => (
             <div key={feature.id || index} className="group">
               <div className="flex items-start space-x-4 p-6 bg-white/60 dark:bg-gray-800/60 rounded-xl border border-white/80 dark:border-gray-700/80 hover:shadow-lg transition-all duration-300">
                 {feature.file_url && (
@@ -64,7 +64,7 @@ export default function CourseExclusiveFeature({ sections }: CourseExclusiveFeat
                     <div className="w-16 h-16 sm:w-30 sm:h-30 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 group-hover:scale-105 transition-transform">
                       <Image
                         src={feature.file_url || "/placeholder.svg"}
-                        alt={feature.title}
+                        alt={feature.title || "Exclusive feature image"}
                         className="w-full h-full object-contain rounded-[6px]"
                         width={400}
                         height={400}

@@ -11,7 +11,7 @@ interface CoursePageLayoutProps {
 }
 
 /**
- * Main course page layout with modern design and sticky sidebar
+ * Main course page layout (Two column - Main Content and Sidebar)
  */
 export default function CoursePageLayout({ courseData }: CoursePageLayoutProps) {
   //   console.log("CoursePageLayout - Full course data:", JSON.stringify(courseData, null, 2));

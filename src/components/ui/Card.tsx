@@ -1,5 +1,5 @@
 // Card.tsx
-// A UI component set for building consistent card layouts—includes support for hover and glass effects,
+// UI component set for consistent card layouts—includes support for hover and glass effects,
 // structured header, content, title, and description elements.
 
 // Utility function for conditional className
