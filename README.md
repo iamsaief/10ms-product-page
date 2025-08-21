@@ -6,17 +6,17 @@ A modern, responsive course product page built with Next.js 15, featuring beauti
 
 ## 🎨 Features Showcase
 
-• **🎨 Beautiful Dark/Light Themes** - Smooth theme switching with system preference detection
-• **📱 Fully Responsive Design** - Optimized for all devices with mobile-first approach
-• **⚡ Performance Optimized** - ISR caching, lazy loading, and skeleton loading states
-• **🌐 Multilingual Support** - English/Bengali language switching
-• **🎥 Interactive Video Player** - Custom YouTube player with thumbnail previews
-• **💎 Modern UI Components** - Custom design system with glass morphism effects
-• **🔄 Smart Error Handling** - Graceful fallbacks and user-friendly error states
-• **🎯 SEO Optimized** - Dynamic meta tags and Open Graph integration
-• **✨ Smooth Animations** - Micro-interactions and page transitions
-• **🏗️ Clean Architecture** - Modular components with TypeScript safety
-• **🎪 Advanced Styling** - Tailwind CSS v4 with custom design tokens
+- **🎨 Beautiful Dark/Light Themes** - Smooth theme switching with system preference detection
+- **📱 Fully Responsive Design** - Optimized for all devices with mobile-first approach
+- **⚡ Performance Optimized** - ISR caching, lazy loading, and skeleton loading states
+- **🌐 Multilingual Support** - English/Bengali language switching
+- **🎥 Interactive Video Player** - Custom YouTube player with thumbnail previews
+- **💎 Modern UI Components** - Custom design system with glass morphism effects
+- **🔄 Smart Error Handling** - Graceful fallbacks and user-friendly error states
+- **🎯 SEO Optimized** - Dynamic meta tags and Open Graph integration
+- **✨ Smooth Animations** - Micro-interactions and page transitions
+- **🏗️ Clean Architecture** - Modular components with TypeScript safety
+- **🎪 Advanced Styling** - Tailwind CSS v4 with custom design tokens
 
 ## 🛠️ Tech Stack
 
