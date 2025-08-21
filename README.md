@@ -2,7 +2,7 @@
 
 A modern, responsive course product page built with Next.js 15, featuring beautiful UI components, dark mode support, and seamless API integration with the 10minuteschool platform.
 
-🔗 **Live Demo**: [10ms-course-page.vercel.app](https://10ms-course-page.vercel.app)
+🔗 **Live Demo**: [10ms-product-page.vercel.app](https://10ms-product-page.vercel.app)
 
 ## 🎨 Features Showcase
 
